@@ -1,13 +1,12 @@
 <?php
-$host = getenv('DB_HOST') ?: 'localhost';
-$db   = getenv('DB_NAME') ?: 'test';
+$host = getenv('DB_HOST') ?: 'metro.proxy.rlwy.net';
+$db   = getenv('DB_NAME') ?: 'railway';
 $user = getenv('DB_USER') ?: 'root';
-$pass = getenv('DB_PASSWORD') ?: '';
+$pass = getenv('DB_PASSWORD') ?: 'LqHaWqeCCXdVFFFqDcewAynzsUVzfUdM';
 $charset = 'utf8mb4';
-$port = getenv('DB_PORT') ?: 3306;
+$port = getenv('DB_PORT') ?: 53550;
 
-
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+$dsn = "mysql:host=$host;port=$port;dbname=$db;charset=$charset";
 $options = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
@@ -18,3 +17,4 @@ try {
 } catch (\PDOException $e) {
     die("Koneksi database gagal: " . $e->getMessage());
 }
+?>
