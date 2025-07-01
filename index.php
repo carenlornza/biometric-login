@@ -3,7 +3,7 @@ require_once 'vendor/autoload.php';
 $client = new Google_Client();
 $client->setClientId('369264255613-dirakfsnfg5ma0nffr1jng1ianneik3a.apps.googleusercontent.com');
 $client->setClientSecret('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');
-$client->setRedirectUri('https://biometric-login-production.up.railway.app/google/callback.php');
+$client->setRedirectUri('https://biometric-login-production.up.railway.app/callback.php');
 $client->addScope("email");
 $client->addScope("profile");
 $login_url = $client->createAuthUrl();
