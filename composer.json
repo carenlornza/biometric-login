@@ -1,0 +1,11 @@
+{
+    "name": "carenlorenza/google-project",
+    "description": "SSO Google dan OTP WhatsApp",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "google/apiclient": "^2.18",
+        "phpmailer/phpmailer": "^6.10",
+        "lbuchs/webauthn": "^2.2"
+    }
+}
